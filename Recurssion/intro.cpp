@@ -35,11 +35,52 @@ using namespace std;
 // }
 
 //Factorial of N                                   TC=O(n)  SC=O(n)
-int fact(int n){
-    if(n==0)
-        return 1;
-    return n * fact(n-1);
-}
-int main(){
-    cout<<fact(5)<<endl;
-}
+// int fact(int n){
+//     if(n==0)
+//         return 1;
+//     return n * fact(n-1);
+// }
+// int main(){
+//     cout<<fact(5)<<endl;
+// }
+
+//Reverse an array
+// void swap(int x,int y){
+//     int temp=x;
+//     x=y;
+//     y=temp;
+// }
+
+// void revArray(int arr[],int i,int j){
+//     if(i>=j)
+//         return;
+//     swap(arr[i],arr[j]);
+//     revArray(arr,i+1,j-1);
+// }
+
+// void display(int arr[],int i,int j){
+//     if(i>j)
+//         return;
+//     cout<<arr[i]<<" ";
+//     display(arr,i+1,j);
+// }
+
+// int main(){
+//     int arr[]={2,3,4,5,2};
+//     revArray(arr,0,4);
+//     display(arr,0,4);
+// }
+
+//To check string is palindrome
+// bool toCheck(string s,int i,int j){
+//     if(i>=j)
+//         return true;
+//     if(s[i]!=s[j])
+//         return false;
+//     return toCheck(s,i+1,j-1);
+// }
+
+// int main(){
+//     string s="madam";
+//     cout<<toCheck(s,0,s.length()-1);
+// }
