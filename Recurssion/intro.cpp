@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// void f(int i,int n){   //Print 1 to N
+// void f(int i,int n){   //Print 1 to N           TC=O(n)  SC=O(n)
 //     if(i>n)
 //         return;
 
@@ -23,7 +23,7 @@ using namespace std;
 //     fn(3,3);
 // }
 
-//Sum of first N numbers  functional way
+//Sum of first N numbers  functional way           TC=O(n)  SC=O(n)
 // int sum(int n){
 //     if(n==1)
 //         return 1;
@@ -34,7 +34,7 @@ using namespace std;
 //     cout<<sum(10)<<endl;
 // }
 
-//Factorial of N
+//Factorial of N                                   TC=O(n)  SC=O(n)
 int fact(int n){
     if(n==0)
         return 1;
