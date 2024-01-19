@@ -23,33 +23,33 @@ using namespace std;
 //     fn(3,3);
 // }
 
-//Sum of first N numbers  functional way           TC=O(n)  SC=O(n)
-// int sum(int n){
-//     if(n==1)
-//         return 1;
-//     return n + sum(n-1);
-// }
+// Sum of first N numbers  functional way           TC=O(n)  SC=O(n)
+//  int sum(int n){
+//      if(n==1)
+//          return 1;
+//      return n + sum(n-1);
+//  }
 
 // int main(){
 //     cout<<sum(10)<<endl;
 // }
 
-//Factorial of N                                   TC=O(n)  SC=O(n)
-// int fact(int n){
-//     if(n==0)
-//         return 1;
-//     return n * fact(n-1);
-// }
-// int main(){
-//     cout<<fact(5)<<endl;
-// }
+// Factorial of N                                   TC=O(n)  SC=O(n)
+//  int fact(int n){
+//      if(n==0)
+//          return 1;
+//      return n * fact(n-1);
+//  }
+//  int main(){
+//      cout<<fact(5)<<endl;
+//  }
 
-//Reverse an array
-// void swap(int x,int y){
-//     int temp=x;
-//     x=y;
-//     y=temp;
-// }
+// Reverse an array
+//  void swap(int x,int y){
+//      int temp=x;
+//      x=y;
+//      y=temp;
+//  }
 
 // void revArray(int arr[],int i,int j){
 //     if(i>=j)
@@ -71,16 +71,31 @@ using namespace std;
 //     display(arr,0,4);
 // }
 
-//To check string is palindrome
-// bool toCheck(string s,int i,int j){
-//     if(i>=j)
-//         return true;
-//     if(s[i]!=s[j])
-//         return false;
-//     return toCheck(s,i+1,j-1);
-// }
+// To check string is palindrome
+//  bool toCheck(string s,int i,int j){
+//      if(i>=j)
+//          return true;
+//      if(s[i]!=s[j])
+//          return false;
+//      return toCheck(s,i+1,j-1);
+//  }
 
 // int main(){
 //     string s="madam";
 //     cout<<toCheck(s,0,s.length()-1);
 // }
+
+// Multiple recursion calls -nth Fibonacci no.
+int fibo(int n)
+{
+    if (n <= 1)
+        return n;
+    int last = fibo(n - 1);
+    int slast = fibo(n - 2);
+    return last + slast;
+}
+
+int main()
+{
+    cout << fibo(9);
+}
