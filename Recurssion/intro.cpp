@@ -156,17 +156,17 @@ using namespace std;
 // }
 
 // // 1 to n
-int cnt = 0;
-void fn(int n)
-{
-    if (cnt >= n)
-        return;
-    printf("%d ", cnt);
-    cnt++;
-    fn(n);
-}
-int main()
-{
-    int n = 5;
-    fn(n);
-}
+// int cnt = 0;
+// void fn(int n)
+// {
+//     if (cnt >= n)
+//         return;
+//     printf("%d ", cnt);
+//     cnt++;
+//     fn(n);
+// }
+// int main()
+// {
+//     int n = 5;
+//     fn(n);
+// }
