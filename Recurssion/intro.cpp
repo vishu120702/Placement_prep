@@ -113,12 +113,11 @@ using namespace std;
 //     cout << fibo(9);
 // }
 
-// // Subsequent
+// // Subsequence
 // void print(vector<int> v)
 // {
 //     int n = v.size();
 //     cout << "{";
-//     // cout<<n;
 //     for (int i = 0; i < n; i++)
 //     {
 //         if (i == n - 1)
@@ -126,23 +125,28 @@ using namespace std;
 //             cout << v[i];
 //             break;                        //terminates the loop
 //         }
-
 //         cout << v[i] << " ";
 //     }
 //     cout << "}" << endl;
 // }
 
-// void f(int i, int arr[], vector<int> v)
+// void f(int i, int arr[], vector<int> &v)
 // {
 //     if (i >= 3)
 //     {
+//         // for(auto it:v){
+//         //     cout<<it<<" ";
+//         // }
+//         // cout<<endl;
 //         print(v);
 //         // return;                           //terminates the function
 //     }
 //     else
 //     {
+//         //take or pick perticular index element into subsequence
 //         v.push_back(arr[i]);
 //         f(i + 1, arr, v);
+//         //not take or not pick perticular index element into subsequence
 //         v.pop_back();
 //         f(i + 1, arr, v);
 //     }
@@ -170,3 +174,4 @@ using namespace std;
 //     int n = 5;
 //     fn(n);
 // }
+
