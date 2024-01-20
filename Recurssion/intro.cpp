@@ -112,3 +112,61 @@ using namespace std;
 // {
 //     cout << fibo(9);
 // }
+
+// // Subsequent
+// void print(vector<int> v)
+// {
+//     int n = v.size();
+//     cout << "{";
+//     // cout<<n;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (i == n - 1)
+//         {
+//             cout << v[i];
+//             break;                        //terminates the loop
+//         }
+
+//         cout << v[i] << " ";
+//     }
+//     cout << "}" << endl;
+// }
+
+// void f(int i, int arr[], vector<int> v)
+// {
+//     if (i >= 3)
+//     {
+//         print(v);
+//         // return;                           //terminates the function
+//     }
+//     else
+//     {
+//         v.push_back(arr[i]);
+//         f(i + 1, arr, v);
+//         v.pop_back();
+//         f(i + 1, arr, v);
+//     }
+// }
+
+// int main()
+// {
+//     int arr[] = {3, 1, 2};
+//     vector<int> v;
+//     f(0, arr, v);
+// }
+
+// // 1 to n
+int cnt = 0;
+void fn(int n)
+{
+    if (cnt >= n)
+        return;
+    printf("%d ", cnt);
+    cnt++;
+    fn(n);
+}
+int main()
+{
+    int n = 5;
+    fn(n);
+}
