@@ -209,42 +209,71 @@ using namespace std;
 // }
 
 // // Sum of subsequence (condition: only one answer to print)
-bool flag = false;
-void f(int i, int arr[], vector<int> &v, int sum)
+// bool flag = false;
+// void f(int i, int arr[], vector<int> &v, int sum)
+// {
+//     if (i >= 3)
+//     {
+//         if (sum == 2)
+//         {
+//             for (auto it : v)
+//             {
+//                 cout << it << " ";
+//             }
+//             flag = true; // codition for only one answer
+//             cout << endl;
+//         }
+//         return; // terminates the function
+//     }
+
+//     v.push_back(arr[i]); // take
+//     sum += arr[i];       // added element of index i
+//     if (!flag)
+//     {
+//         f(i + 1, arr, v, sum);
+//     }
+
+//     v.pop_back();  // non-take
+//     sum -= arr[i]; // subtracted element of index i
+//     if (!flag)
+//     {
+//         f(i + 1, arr, v, sum);
+//     }
+// }
+
+// int main()
+// {
+//     int arr[] = {1, 2, 1};
+//     // int sum = 2;
+//     vector<int> v;
+//     f(0, arr, v, 0);
+// }
+
+// count the subsequences with sum k
+int cnt = 0;
+void f(int i, int arr[], int sum)
 {
-    if (i >= 3)
+    if (i >= 5)
     {
-        if (sum == 2)
+        if (sum == 3)
         {
-            for (auto it : v)
-            {
-                cout << it << " ";
-            }
-            flag = true; // codition for only one answer
-            cout << endl;
+            cnt++;
         }
         return; // terminates the function
     }
 
-    v.push_back(arr[i]); // take
-    sum += arr[i];       // added element of index i
-    if (!flag)
-    {
-        f(i + 1, arr, v, sum);
-    }
+    sum += arr[i]; // added element of index i
+    f(i + 1, arr, sum);
 
-    v.pop_back();  // non-take
     sum -= arr[i]; // subtracted element of index i
-    if (!flag)
-    {
-        f(i + 1, arr, v, sum);
-    }
+    f(i + 1, arr, sum);
 }
 
 int main()
 {
-    int arr[] = {1, 2, 1};
-    // int sum = 2;
+    int arr[] = {1, 2, 1, 1, 3};
+    // int sum = 3;
     vector<int> v;
-    f(0, arr, v, 0);
+    f(0, arr, 0);
+    cout << cnt;
 }
