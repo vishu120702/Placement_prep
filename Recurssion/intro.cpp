@@ -175,7 +175,41 @@ using namespace std;
 //     fn(n);
 // }
 
-// Sum of suvsequence
+// // Sum of subsequence
+// void f(int i, int arr[], vector<int> &v, int sum)
+// {
+//     if (i >= 3)
+//     {
+//         if (sum == 2)
+//         {
+//             for (auto it : v)
+//             {
+//                 cout << it << " ";
+//             }
+//             cout << endl;
+//         }
+//         return; // terminates the function
+//     }
+
+//     v.push_back(arr[i]);
+//     sum += arr[i];  //added element of index i
+//     f(i + 1, arr, v, sum);
+
+//     v.pop_back();
+//     sum -= arr[i];  //subtracted element of index i
+//     f(i + 1, arr, v, sum);
+// }
+
+// int main()
+// {
+//     int arr[] = {1, 2, 1};
+//     // int sum = 2;
+//     vector<int> v;
+//     f(0, arr, v, 0);
+// }
+
+// // Sum of subsequence (condition: only one answer to print)
+bool flag = false;
 void f(int i, int arr[], vector<int> &v, int sum)
 {
     if (i >= 3)
@@ -186,18 +220,25 @@ void f(int i, int arr[], vector<int> &v, int sum)
             {
                 cout << it << " ";
             }
+            flag = true; // codition for only one answer
             cout << endl;
         }
         return; // terminates the function
     }
 
-    v.push_back(arr[i]);
-    sum += arr[i];  //added element of index i
-    f(i + 1, arr, v, sum);
+    v.push_back(arr[i]); // take
+    sum += arr[i];       // added element of index i
+    if (!flag)
+    {
+        f(i + 1, arr, v, sum);
+    }
 
-    v.pop_back();
-    sum -= arr[i];  //subtracted element of index i
-    f(i + 1, arr, v, sum);
+    v.pop_back();  // non-take
+    sum -= arr[i]; // subtracted element of index i
+    if (!flag)
+    {
+        f(i + 1, arr, v, sum);
+    }
 }
 
 int main()
