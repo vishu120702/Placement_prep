@@ -249,31 +249,32 @@ using namespace std;
 //     f(0, arr, v, 0);
 // }
 
-// count the subsequences with sum k
-int cnt = 0;
-void f(int i, int arr[], int sum)
-{
-    if (i >= 5)
-    {
-        if (sum == 3)
-        {
-            cnt++;
-        }
-        return; // terminates the function
-    }
+// // count the subsequences with sum k                    same code can be done using return l+r;//use for multiple recurssion call
+// int cnt = 0;
+// void f(int i, int arr[], int sum)
+// {
+//     // if(sum>3) return;   //strictly use if elements are positive   -to decrease the time complexity
+//     if (i >= 5)
+//     {
+//         if (sum == 3)
+//         {
+//             cnt++;
+//         }
+//         return; // terminates the function
+//     }
 
-    sum += arr[i]; // added element of index i
-    f(i + 1, arr, sum);
+//     sum += arr[i]; // added element of index i
+//     f(i + 1, arr, sum);
 
-    sum -= arr[i]; // subtracted element of index i
-    f(i + 1, arr, sum);
-}
+//     sum -= arr[i]; // subtracted element of index i
+//     f(i + 1, arr, sum);
+// }
 
-int main()
-{
-    int arr[] = {1, 2, 1, 1, 3};
-    // int sum = 3;
-    vector<int> v;
-    f(0, arr, 0);
-    cout << cnt;
-}
+// int main()
+// {
+//     int arr[] = {1, 2, 1, 1, 3};
+//     // int sum = 3;
+//     vector<int> v;
+//     f(0, arr, 0);
+//     cout << cnt;
+// }
