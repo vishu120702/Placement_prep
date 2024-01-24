@@ -278,3 +278,8 @@ using namespace std;
 //     f(0, arr, 0);
 //     cout << cnt;
 // }
+
+int main()
+{
+    cout << "Hello World!";
+}
