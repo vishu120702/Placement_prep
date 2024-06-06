@@ -3,20 +3,20 @@ using namespace std;
 
 int main()
 {
-    string str = "Hello"; // cant be declare with 'Helllo' {considered as character}
-    str[0] = 'a';         // cant be replace with "a" {considered as string}
-    cout << "size  " << str.size() << " " << str.length() << endl;
-    cout << str << endl;
+    // string str = "Hello"; // cant be declare with 'Helllo' {considered as character}
+    // str[0] = 'a';         // cant be replace with "a" {considered as string}
+    // cout << "size  " << str.size() << " " << str.length() << endl;
+    // cout << str << endl;
 
-    int t;
-    cin >> t;
-    cin.ignore(); // use while using getline() fun to get 1st input (which get skiped)
-    while (t--)
-    {
-        string s;
-        getline(cin, s);
-        cout << s << endl;
-    }
+    // int t;
+    // cin >> t;
+    // cin.ignore(); // use while using getline() fun to get 1st input (which get skiped)
+    // while (t--)
+    // {
+    //     string s;
+    //     getline(cin, s);
+    //     cout << s << endl;
+    // }
 
     // // revrse string & palindrome
     // string str;
@@ -47,9 +47,9 @@ int main()
     //     cout << "YES" << endl;
 
     // // to get int form string with large size input
-    // string s = "123456789876543456783456789876543456";
-    // int last_digit = s[s.size() - 1] - '0';
-    // cout << a << endl;
+    string s = "123456789876543456783456789876543456";
+    int last_digit = s[s.size() - 1] - '0';
+    cout << last_digit << endl;
 
     // return 0;
 }
