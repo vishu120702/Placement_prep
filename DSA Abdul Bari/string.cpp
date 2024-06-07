@@ -1,3 +1,4 @@
+// cout<<typeid(variable_name).name() << endl;
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -166,9 +167,3 @@ using namespace std;
 //     }
 // }
 
-int main()
-{
-    string s = "ABC";
-    // permutation(s, 0);
-    perm(s, 0, 2);
-}
