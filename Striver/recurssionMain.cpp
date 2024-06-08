@@ -98,7 +98,7 @@ using namespace std;
 //     cout << toCheck(s, 0, s.length() - 1);
 // }
 
-// // Multiple recursion calls -nth Fibonacci no.
+// // Multiple recursion calls -nth Fibonacci no.                //theory
 // int fibo(int n)
 // {
 //     if (n <= 1)
@@ -113,7 +113,7 @@ using namespace std;
 //     cout << fibo(9);
 // }
 
-// // Subsequence
+// // Subsequence                                                 //theory
 // void print(vector<int> v)
 // {
 //     int n = v.size();
@@ -277,75 +277,4 @@ using namespace std;
 //     vector<int> v;
 //     f(0, arr, 0);
 //     cout << cnt;
-// }
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main() {
-// 	// your code goes here
-// 	int t;
-// 	cin>>t;
-// 	while(t--){
-// 	    int n;
-// 	    int k;
-// 	    cin>>n>>k;
-// 	    int arr[n];
-// 	    for(int i=0;i<n;i++){
-// 	        cin>>arr[i];
-// 	    }
-// 	    int x=100;
-// 	    for(int i=0;i<n;i++){
-// 	        int rem=arr[i];
-// 	        int temp;
-// 	        while(rem){
-// 	            rem=rem-k;
-// 	            if(rem>0){
-// 	                temp=rem;
-// 	            }
-// 	        }
-// 	        if(x>temp){
-// 	            x=temp;
-// 	        }
-// 	    }
-// 	    cout<<x<<endl;
-// 	}
-// 	return 0;
-// }
-
-// int main()
-// {
-//     // your code goes here
-//     int t;
-//     cin >> t;
-//     while (t--)
-//     {
-//         int n, q;
-//         cin >> n >> q;
-//         int tp = n + q;
-//         int arr[tp];
-//         int ar[q];
-//         for (int i = 0; i < n; i++)
-//         {
-//             cin >> arr[i];
-//         }
-//         for (int i = 0; i < q; i++)
-//         {
-//             cin >> ar[i];
-//         }
-
-//         int h[26] = {0}; // O(n) -using hashing
-//         for (int i = 0; i < a.length(); i++)
-//         {
-//             h[a[i] - 97]++;
-//         }
-//         for (int i = 0; i < 26; i++)
-//         {
-//             if (h[i] > 1)
-//             {
-//                 cout << char(i + 97) << " " << h[i] << endl;
-//             }
-//         }
-//     }
-//     return 0;
 // }

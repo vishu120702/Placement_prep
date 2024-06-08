@@ -61,6 +61,8 @@
 // int main()
 // {
     // vector<int> v;         // only define
+    // vector<vector<int>> v; // Vector of vectors  {{1,3,2}, {7,4}, {9.7,5,6}, {3,6,9} ...upto (jo marzi)th vector} //i.e. vectors "can" have variable length
+    // vector<int> v1[10];    // Array of vectors   {{1,3,2}, {7,4}, {9.7,5,6}, {3,6,9} ...upto 10th vector}      //i.e. arrays "can not" have variable length
     // vector<int> v1(10);    // Define vector of size 10 and initialized with 0
     // vector<int> v2(5, 12); // Initialize all 5 eements with value 12
     // vector<int> vec = {2, 4, 556, 67, 834, 678, 9, 342, 56, 3234565};
