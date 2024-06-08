@@ -278,3 +278,43 @@ using namespace std;
 //     f(0, arr, 0);
 //     cout << cnt;
 // }
+
+bool flag = false;
+void f(int i, int arr[], vector<int> &v, int sum)
+{
+    if (i >= 4)
+    {
+        if (sum == 7)
+        {
+            for (auto it : v)
+            {
+                cout << it << " ";
+            }
+            // flag = true; // codition for only one answer
+            cout << endl;
+        }
+        return; // terminates the function
+    }
+
+    v.push_back(arr[i]); // take
+    sum += arr[i];       // added element of index i
+    if (!flag)
+    {
+        f(i + 1, arr, v, sum);
+    }
+
+    v.pop_back();  // non-take
+    sum -= arr[i]; // subtracted element of index i
+    if (!flag)
+    {
+        f(i + 1, arr, v, sum);
+    }
+}
+
+int main()
+{
+    int arr[] = {2, 3, 2, 7};
+    // int sum = 7;
+    vector<int> v;
+    f(0, arr, v, 0);
+}
