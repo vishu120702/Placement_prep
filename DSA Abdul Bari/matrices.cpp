@@ -104,8 +104,8 @@ using namespace std;
 // };
 
 // void Lower_tri::set(int i,int j,int x){
-//     if(i>=j){
-//         A[((i-1)*i/2)+(j-1)]=x;                       //require index of M[i,j]  is A[((i-1)*i/2) + (j-1)]
+//     if(i>=j){                             //if given index is starting from 0 then -> also we need to find require index formulae. A[i*(i+1)/2 + j]
+//         A[((i-1)*i/2)+(j-1)]=x;                       //require index of M[i,j]  is A[((i-1)*i/2) + (j-1)]   
 //     }
 // }
 // int Lower_tri::get(int i,int j){
@@ -381,27 +381,27 @@ using namespace std;
 // }
 
 // // toeplitz matrics                             //  _          _      condition: M[i,j] = M[i-1, j-1]
-// class Tridigonal     //using lower tringular    // | 2  3  4  5 |
+// class Toeplitz     //using lower tringular      // | 2  3  4  5 |
 // {                                               // | 7  2  3  4 |     }  [2, 3, 4, 5,| 7, 8, 9]    size= 2*n-1
 // private:                                        // | 8  7  2  3 |
 //     int n;                                      // | 9  8  7  2 |
 //     int *A;                                     //  ￣         ￣
 // public:
-//     Tridigonal(){
+//     Toeplitz(){
 //         n=2;
 //         A=new int[4];
 //     }
-//     Tridigonal(int n){
+//     Toeplitz(int n){
 //         this->n=n;
 //         A=new int[2*n-1];     //total need of space
 //     };
 //     void set(int i,int j,int x);
 //     int get(int i,int j);
 //     void display();
-//     ~Tridigonal();
+//     ~Toeplitz();
 // };
 
-// void Tridigonal::set(int i,int j,int x){
+// void Toeplitz::set(int i,int j,int x){
 //     if(i<=j){
 //         A[j-i]=x;                       //require indexs of M[i,j]
 //     }
@@ -409,7 +409,7 @@ using namespace std;
 //         A[n+(i-j-1)]=x;
 //     }
 // }
-// int Tridigonal::get(int i,int j){
+// int Toeplitz::get(int i,int j){
 //     if(i<=j){
 //         return A[j-i];
 //     }
@@ -417,7 +417,7 @@ using namespace std;
 //         return A[n+(i-j-1)];
 //     }
 // }
-// void Tridigonal::display(){
+// void Toeplitz::display(){
 //     for(int i=0;i<n;i++){
 //         for(int j=0;j<n;j++){
 //             cout<<get(i+1,j+1)<<" ";  //mathematical matrics index start from 1
@@ -426,13 +426,13 @@ using namespace std;
 //     }
 // }
 
-// Tridigonal::~Tridigonal()
+// Toeplitz::~Toeplitz()
 // {
 //     delete []A;
 // }
 
 // int main(){
-//     Tridigonal d(4);
+//     Toeplitz d(4);
 //     d.set(1,1,2);
 //     d.set(2,2,2);
 //     d.set(3,3,2);
@@ -514,7 +514,7 @@ using namespace std;
 //     cout << endl;
 // }
 
-// Addition of two sparse matrices.  Using 3 column representation.
+// Addition of two sparse matrices.  Using 3 column representation. (row, column, element)
 // void add(struct sparse *s1, struct sparse *s2)
 // {
 //     if (s1->m == s2->m && s1->n == s2->n)

@@ -7,7 +7,7 @@ using namespace std;
 //     int arr[] = {3, 6, 8, 8, 10, 10, 10, 12, 15, 15, 15, 15, 15, 15, 20};
 //     int n = sizeof(arr) / sizeof(arr[0]);
 
-//     // int h[20+1] = {0};
+//     // int h[20+1] = {0};                           //using Hash Table
 //     // for (int i = 0; i < n; i++)
 //     // {
 //     //     h[arr[i]]++;
@@ -21,7 +21,7 @@ using namespace std;
 //     //     }
 //     // }
 
-//     // for (int i = 0; i < n - 1; i++)
+//     // for (int i = 0; i < n - 1; i++)                    //Brutforce method
 //     // {
 //     //     if (arr[i] == arr[i + 1])
 //     //     {
@@ -33,7 +33,7 @@ using namespace std;
 //     //     }
 //     // }
 
-//     // int last_duplicate = -1, count = 1;
+//     // int last_duplicate = -1, count = 1;                 //using last_duplicate
 //     // for (int i = 0; i < n - 1; i++)
 //     // {
 //     //     if (arr[i] == arr[i + 1])
@@ -147,7 +147,7 @@ using namespace std;
 //     // int i=0,j=n-1;
 //     cout << "{ ";
 //     // while(i<j){
-//     for (int i = 0, j = n - 1; i < j;)
+//     for (int i = 0, j = n - 1; i < j;)            //**for loop implementation
 //     {
 //         int temp = arr[i] + arr[j];
 //         if (temp == SUM)
@@ -169,22 +169,22 @@ using namespace std;
 // }
 
 // finding min & max in single scan
-int main()
-{
-    int arr[] = {5, 8, 3, 9, 6, 2, 10, 7, -1, 4};
-    int n = sizeof(arr) / sizeof(arr[0]);
+// int main()
+// {
+//     int arr[] = {5, 8, 3, 9, 6, 2, 10, 7, -1, 4};
+//     int n = sizeof(arr) / sizeof(arr[0]);
 
-    int min = arr[0], max = arr[0];
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] > max)
-        {
-            max = arr[i];
-        }
-        else if (arr[i] < min)
-        {
-            min = arr[i];
-        }
-    }
-    cout << min << " " << max;
-}
+//     int min = arr[0], max = arr[0];
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (arr[i] > max)
+//         {
+//             max = arr[i];
+//         }
+//         else if (arr[i] < min)
+//         {
+//             min = arr[i];
+//         }
+//     }
+//     cout << min << " " << max;
+// }

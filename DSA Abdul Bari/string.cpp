@@ -33,10 +33,9 @@ using namespace std;
 //     // a[1]='o';
 //     // cout<<a;
 
-//     // int H = 0, x = 0;                                   // O(n) -using bitwise operations
+//     // int H = 0, x = 1;                                   // O(n) -using bitwise operations
 //     // for (int i = 0; i < a.length(); i++)
 //     // {
-//     //     x = 1;
 //     //     x = x << (a[i] - 97);
 //     //     if ((x & H )> 0)
 //     //     {
@@ -96,11 +95,11 @@ using namespace std;
 // int main()
 // {
 //     string a = "decimal";
-//     string b = "medicalo";
+//     string b = "medical";
 
-//     int h[26] = {0};
 //     if (a.length() == b.length())
 //     {
+//         int h[26] = {0};
 //         for (int i = 0; i < a.length(); i++)
 //         {
 //             h[a[i] - 97]++;
@@ -131,39 +130,50 @@ using namespace std;
 // }
 
 // permutation of string                           //recursion,backtracking,bruteforce
-// void permutation(string s,int k){
-//     static int A[10]={0};
-//     static char Res[10];
-//     if(s[k]=='\0'){
-//         Res[k]='\0';
-//         cout<<Res<<" ";
-//     }
-//     else{
-//         for(int i=0;s[i]!='\0';i++){
-//             if(A[i]==0){
-//                 Res[k]=s[i];
-//                 A[i]=1;
-//                 permutation(s,k+1);
-//                 A[i]=0;
-//             }
-//         }
-//     }
-// }
+void permutation(string s, int k)
+{
+    static int A[10] = {0};
+    static char Res[10];
+    if (s[k] == '\0')
+    {
+        Res[k] = '\0';
+        cout << Res << " ";
+    }
+    else
+    {
+        for (int i = 0; s[i] != '\0'; i++)
+        {
+            if (A[i] == 0)
+            {
+                Res[k] = s[i];
+                A[i] = 1;
+                permutation(s, k + 1);
+                A[i] = 0;
+            }
+        }
+    }
+}
 
-// void perm(string s, int l, int h)               //using swaping technique
-// {
-//     if (l == h)
-//     {
-//         cout << s << " ";
-//     }
-//     else
-//     {
-//         for (int i = l; i <= h; i++)
-//         {
-//             swap(s[i], s[l]);
-//             perm(s, l + 1, h);
-//             swap(s[l], s[i]);
-//         }
-//     }
-// }
+void perm(string s, int l, int h) // using swaping technique and recurssion
+{
+    if (l == h)
+    {
+        cout << s << " ";
+    }
+    else
+    {
+        for (int i = l; i <= h; i++)
+        {
+            swap(s[i], s[l]);
+            perm(s, l + 1, h); //recursion
+            swap(s[l], s[i]);
+        }
+    }
+}
 
+int main()
+{
+    string s = "ABC";
+    perm(s,0,2);
+    // permutation(s, 0);.
+}
