@@ -14,14 +14,14 @@ int main()
     }
     for (int i = 0; i < n; i++)
     {
-        int minIndex = i;
+        int minIndex = i;                      //yaha khel hai sara
         for (int j = i + 1; j < n; j++)
         {
             if (arr[j] < arr[i])
             {
                 swap(arr[i], arr[j]);
             }
-            minIndex = j;
+            minIndex = j;                      //aur yaha
         }
     }
     for (int i = 0; i < n; i++)

@@ -35,7 +35,7 @@ int main()
     // // only to check palindrome
     // string str;
     // cin >> str;
-    // bool val;
+    // bool val=false;
     // for (int i = 0; i < str.size() / 2; i++)
     // {
     //     if (str[i] != str[str.size() - 1 - i])

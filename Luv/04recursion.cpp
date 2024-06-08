@@ -57,21 +57,22 @@
 //     cout << asum(arr, n);
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
+// Digit sum of number.
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int digit_sum(int n)
-{
-    if (n == 0)
-        return 0;
-    // cout << n << " " << n / 10 << " " << n % 10 << endl;
-    return digit_sum(n / 10) + (n % 10);
-}
+// int digit_sum(int n)
+// {
+//     if (n == 0)
+//         return 0;
+//     // cout << n << " " << n / 10 << " " << n % 10 << endl;
+//     return digit_sum(n / 10) + (n % 10);
+// }
 
-int main()
-{
-    int n;
-    cin >> n;
-    cout << digit_sum(n) << endl;
-    // cout << n;
-}
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     cout << digit_sum(n) << endl;
+//     // cout << n;
+// }

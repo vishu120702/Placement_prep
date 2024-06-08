@@ -13,7 +13,7 @@ Constrains:
 // const int N = 10e5 + 10;
 // int hash_array[N];
 
-// int main() //time complexity = O(n)+O(q) = O(n)
+// int main()                                                  //time complexity = O(n)+O(q) = O(n)
 // {
 //     int n;
 //     cin >> n;
@@ -43,8 +43,8 @@ print factorial of X in modulus of 10^9 + 7 of the number
 // #include <bits/stdc++.h>
 // using namespace std;
 
-// // const long long M = 10e8+7;   //10e8 == 10^9  or we can write 1e9 (1000000007)
-// const int M = 1e9 + 7;
+// // const long long M = 10e8+7;               //10e8 == 10^9  or we can write 1e9 (1000000007)
+// const int M = 1e9 + 7;                       //10 ki power 9 plus 7
 
 // const int N = 1e5 + 10; // or 10e4 +10
 // long long fact[N];
@@ -55,8 +55,8 @@ print factorial of X in modulus of 10^9 + 7 of the number
 //     fact[0] = fact[1] = 1;
 //     for (int i = 2; i < N; i++)
 //     {
-//         // fact[i] = fact[i - 1] * i;
-//         fact[i] = (fact[i - 1] * i) % M;
+//         // fact[i] = fact[i - 1] * i;                  //actual factorial of no.(i)
+//         fact[i] = (fact[i - 1] * i) % M;               //factorial of no.(i) in modulus of 10^9 + 7
 //     }
 
 //     int x;
@@ -81,32 +81,32 @@ Constraints:-
 6 3 8 1
 */
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-const int N = 1e3 + 10;
-long long pf[N][N];
-int arr[N][N];
-int main()
-{
-    int n;
-    cin >> n;
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-        {
-            cin >> arr[i][j];
-            pf[i][j] = arr[i][j] + pf[i - 1][j] + pf[i][j - 1] - pf[i - 1][j - 1];
-        }
-    }
+// const int N = 1e3 + 10;
+// long long pf[N][N];
+// int arr[N][N];
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n; j++)
+//         {
+//             cin >> arr[i][j];
+//             pf[i][j] = arr[i][j] + pf[i - 1][j] + pf[i][j - 1] - pf[i - 1][j - 1];
+//         }
+//     }
 
-    int q;
-    cin >> q;
-    while (q--)
-    {
-        int a, b, c, d;
-        cin >> a >> b >> c >> d;
-        int sum = pf[c][d] - pf[c][b - 1] - pf[a - 1][d] + pf[a - 1][b - 1];
-        cout << sum;
-    }
-}   
+//     int q;
+//     cin >> q;
+//     while (q--)
+//     {
+//         int a, b, c, d;
+//         cin >> a >> b >> c >> d;
+//         int sum = pf[c][d] - pf[c][b - 1] - pf[a - 1][d] + pf[a - 1][b - 1];
+//         cout << sum;
+//     }
+// }   

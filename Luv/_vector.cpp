@@ -9,12 +9,12 @@ int main()
     // for(int i=0;i<v.size();i++){
     //     int temp;
     //     cin>>temp;
-    //     v.insert(temp);
+    //     v.insert(temp);                     //or we generally use   v.push_back();
     // }
     // for(int i=0;i<v.size();i++){
 
     //     cout<<v[i]<<" ";
-    // }
+    // }                                                   //bas vector khatam
     cout << "12" << endl;
     char *a[10] = {};
     for (int i = 0; i < 10; i++)
