@@ -11,7 +11,7 @@
 //     cout << endl;
 // }
 
-// void revArray(int arr[],int n)
+// void revArray(int arr[],int n)                        //using swaping
 // {
 //     for (int i = 0; i < n / 2; i++)
 //     {
@@ -183,7 +183,7 @@
 //                 nt++;
 //         }
 //         int l = 0;
-//         int r = nt;
+//         int r = n;
 //         for (int i = 0; i < n; i++)
 //         {
 //             if (arr[i] < 0)
@@ -193,7 +193,8 @@
 //                 // arr[i] = temp;
 //                 swap(arr[l], arr[i]);
 //                 l++;
-//             }/             else
+//             }
+//             else
 //             {
 //                 int tp = arr[r];
 //             }
@@ -214,7 +215,7 @@
 //     //Function to return the count of number of elements in union of two arrays.
 //     int doUnion(int a[], int n, int b[], int m)  {
 //         //code here
-//         set<int> s;
+//         set<int> s;                     //waah bete mouj kardi
 //         for(int i=0;i<n;i++){
 //             s.insert(a[i]);
 //         }
@@ -274,7 +275,7 @@
 //     }
 // }
 
-// 08 find Largest sum contiguous Subarray [V. IMP] --------------------------------------------------------------------------------------------------------------
+// 08 find Largest sum contiguous Subarray [V. IMP] -----------------------------noob---------------------------------------------------------------------------------
 // #include<bits/stdc++.h>
 // using namespace std;
 
@@ -371,3 +372,15 @@ int main() {
     return 0;
 }
 // } Driver Code Ends
+
+
+
+
+
+
+
+
+
+//TCS Qns
+//1. To check whether given no is Armstrong?
+//2. From n no. of students we need to print k top students details.
