@@ -114,7 +114,7 @@ using namespace std;
 // }
 
 // // Subsequence                                                 //theory
-// void print(vector<int> v)
+// void print(vector<int> v)  //just printing vector
 // {
 //     int n = v.size();
 //     cout << "{";
@@ -253,8 +253,8 @@ using namespace std;
 // int cnt = 0;
 // void f(int i, int arr[], int sum)
 // {
-//     // if(sum>3) return;   //strictly use if elements are positive   -to decrease the time complexity
-//     if (i >= 5)
+//     if(sum>3) return;   //strictly use if elements are positive   -to decrease the time complexity
+//     if (i >= 5)         //reached to end of array
 //     {
 //         if (sum == 3)
 //         {
